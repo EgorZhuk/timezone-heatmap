@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timezones</title>
+    <script type="text/javascript" src="tz.js"></script>
+
+</head>
+<body>
+<object id="svg1" data="tz.svg" type="image/svg+xml"></object>
+</body>
+<script>
+
+    var _heatMap = ["#E1F5FE", "#B3E5FC", "#81D4FA", "#4FC3F7", "#29B6F6", "#03A9F4", "#039BE5", "#0288D1", "#0277BD", "#01579B"];
+
+    var _values = [
+        {
+            "id": "#utc0100",
+            "weight": 9.93
+        },
+        {
+            "id": "#utc0200",
+            "weight": 9.52
+        },
+        {
+            "id": "#utc0800",
+            "weight": 5.31
+        },
+        {
+            "id": "#utc-0500",
+            "weight": 4.48
+        },
+        {
+            "id": "#utc-0700",
+            "weight": 3.61
+        },
+        {
+            "id": "#utc-0400",
+            "weight": 3.5
+        },
+        {
+            "id": "#utc-0800",
+            "weight": 2.62
+        },
+        {
+            "id": "#utc0300",
+            "weight": 2.59
+        },
+        {
+            "id": "#utc0000",
+            "weight": 2.37
+        },
+        {
+            "id": "#utc-0600",
+            "weight": 1.75
+        },
+        {
+            "id": "#utc0530",
+            "weight": 1.7
+        },
+        {
+            "id": "#utc-0300",
+            "weight": 1.56
+        },
+        {
+            "id": "#utc0900",
+            "weight": 1.22
+        },
+        {
+            "id": "#utc0700",
+            "weight": 0.45
+        },
+        {
+            "id": "#utc-0200",
+            "weight": 0.38
+        },
+        {
+            "id": "#utc1000",
+            "weight": 0.35
+        },
+        {
+            "id": "#utc1100",
+            "weight": 0.28
+        },
+        {
+            "id": "#utc0400",
+            "weight": 0.2
+        },
+        {
+            "id": "#utc0600",
+            "weight": 0.18
+        },
+        {
+            "id": "#utc0500",
+            "weight": 0.13
+        },
+        {
+            "id": "#utc1300",
+            "weight": 0.11
+        },
+        {
+            "id": "#utc1200",
+            "weight": 0.1
+        },
+        {
+            "id": "#utc0430",
+            "weight": 0.05
+        },
+        {
+            "id": "#utc0330",
+            "weight": 0.05
+        },
+        {
+            "id": "#utc-0430",
+            "weight": 0.03
+        },
+        {
+            "id": "#utc-1000",
+            "weight": 0.03
+        },
+        {
+            "id": "#utc0930",
+            "weight": 0.03
+        },
+        {
+            "id": "#utc1030",
+            "weight": 0.02
+        },
+        {
+            "id": "#utc0545",
+            "weight": 0.02
+        },
+        {
+            "id": "#utc-0330",
+            "weight": 0.01
+        },
+        {
+            "id": "#utc-0230",
+            "weight": 0.01
+        },
+        {
+            "id": "#utc0630",
+            "weight": 0.01
+        },
+        {
+            "id": "#utc-0900",
+            "weight": 0
+        },
+        {
+            "id": "#utc-1200",
+            "weight": 0
+        },
+        {
+            "id": "#utc1400",
+            "weight": 0
+        },
+        {
+            "id": "#utc0130",
+            "weight": 0
+        },
+        {
+            "id": "#utc-0400",
+            "weight": 0
+        },
+        {
+            "id": "#utc-0100",
+            "weight": 0
+        },
+        {
+            "id": "#utc1130",
+            "weight": 0
+        },
+        {
+            "id": "#utc1245",
+            "weight": 0
+        },
+        {
+            "id": "#utc-0930",
+            "weight": 0
+        },
+        {
+            "id": "#utc-1100",
+            "weight": 0
+        }
+    ];
+
+    document.getElementById("svg1").addEventListener("load", function() {
+        var doc = this.getSVGDocument();
+        timezoneUtils.init(_heatMap, _values);
+        timezoneUtils.applyColors(doc);
+    });
+
+
+</script>
+</html>
